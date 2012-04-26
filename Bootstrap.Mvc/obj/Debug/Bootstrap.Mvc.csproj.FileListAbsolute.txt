@@ -1,5 +1,0 @@
-C:\Users\Jeremy Cade\Documents\Visual Studio 2010\Projects\Bootstrap.Mvc\Bootstrap.Mvc\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\Jeremy Cade\Documents\Visual Studio 2010\Projects\Bootstrap.Mvc\Bootstrap.Mvc\bin\Debug\Bootstrap.Mvc.dll
-C:\Users\Jeremy Cade\Documents\Visual Studio 2010\Projects\Bootstrap.Mvc\Bootstrap.Mvc\bin\Debug\Bootstrap.Mvc.pdb
-C:\Users\Jeremy Cade\Documents\Visual Studio 2010\Projects\Bootstrap.Mvc\Bootstrap.Mvc\obj\Debug\Bootstrap.Mvc.dll
-C:\Users\Jeremy Cade\Documents\Visual Studio 2010\Projects\Bootstrap.Mvc\Bootstrap.Mvc\obj\Debug\Bootstrap.Mvc.pdb
