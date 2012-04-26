@@ -14,8 +14,7 @@ namespace Bootstrap.Mvc
     /// Form Extenions to make working with Twitter Boostrap a little easier.
     /// </summary>
     public static class FormExtensions
-    {        
-        
+    {                
         public static MvcForm BeginForm(this HtmlHelper htmlHelper, string formId, string cssClass)
         {
             string actionName = (string)htmlHelper.ViewContext.RouteData.Values["action"];

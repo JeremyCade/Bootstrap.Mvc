@@ -43,10 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BootstrapHelper.cs" />
-    <Compile Include="Extensions\TagBuilderExtensions.cs" />
-    <Compile Include="Html\FormExtensions.cs" />
-    <Compile Include="Html\InputExtensions.cs" />
+    <Compile Include="TagBuilderExtensions.cs" />
+    <Compile Include="FormExtensions.cs" />
+    <Compile Include="InputExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

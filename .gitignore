@@ -1,0 +1,6 @@
+[Oo]bj
+[Bb]in
+*.csproj.user
+*.suo
+*.cache
+packages/
