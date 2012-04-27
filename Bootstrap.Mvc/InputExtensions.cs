@@ -57,10 +57,8 @@ namespace Bootstrap.Mvc
             TagBuilder label = new TagBuilder("label");
             label.MergeAttributes(htmlAttributes);
             label.MergeAttribute("class","checkbox"); // Add Twitter Bootstrap checkbox style to the label.
-            label.Attributes.Add("for", htmlHelper.ViewContext.ViewData.TemplateInfo.GetFullHtmlFieldId(htmlFieldName));
-            label.InnerHtml = htmlHelper.CheckBox(htmlFieldName, isChecked).ToString();
-            label.SetInnerText(labelText);
-
+            label.Attributes.Add("for", htmlHelper.ViewContext.ViewData.TemplateInfo.GetFullHtmlFieldId(htmlFieldName));            
+            label.InnerHtml = String.Format("{0}{1}",htmlHelper.CheckBox(htmlFieldName, isChecked).ToHtmlString(), labelText);            
             return label.ToMvcHtmlString(TagRenderMode.Normal);
         }
     }

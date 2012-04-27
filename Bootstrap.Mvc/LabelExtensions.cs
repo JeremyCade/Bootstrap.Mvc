@@ -23,30 +23,42 @@ namespace Bootstrap.Mvc
 
         public static MvcHtmlString ControlLabel(this HtmlHelper html, string expression)
         {
+            Dictionary<string, object> htmlAttributes = new Dictionary<string, object>();
+            htmlAttributes.Add("class", "control-label");
+
             return LabelHelper(html,
                    ModelMetadata.FromStringExpression(expression, html.ViewData),
                    expression,
                    null,
-                   new RouteValueDictionary { { "class", "control-label" } });
+                   htmlAttributes);
         }
         
         public static MvcHtmlString ControlLabel(this HtmlHelper html, string expression, string labelText) 
-        {                        
+        {
+            Dictionary<string, object> htmlAttributes = new Dictionary<string, object>();
+            htmlAttributes.Add("class", "control-label");
+
             return LabelHelper(html,
                    ModelMetadata.FromStringExpression(expression, html.ViewData),
                    expression,
                    labelText,
-                   new RouteValueDictionary {{"class","control-label"}});            
+                   htmlAttributes);            
         }
 
         public static MvcHtmlString ControlLabelFor<TModel, TValue>(this HtmlHelper<TModel> html, Expression<Func<TModel, TValue>> expression)
         {
-            return html.LabelFor(expression, new RouteValueDictionary { { "class", "control-label" } });            
+            Dictionary<string, object> htmlAttributes = new Dictionary<string, object>();
+            htmlAttributes.Add("class", "control-label");
+
+            return html.LabelFor(expression, null, htmlAttributes);            
         }
 
         public static MvcHtmlString ControlLabelFor<TModel, TValue>(this HtmlHelper<TModel> html, Expression<Func<TModel, TValue>> expression, string labelText)
         {
-            return html.LabelFor(expression, labelText, new RouteValueDictionary { { "class", "control-label" } });
+            Dictionary<string, object> htmlAttributes = new Dictionary<string, object>();
+            htmlAttributes.Add("class", "control-label");
+
+            return html.LabelFor(expression, labelText, htmlAttributes);
         }
         
         public static MvcHtmlString LabelFor<TModel, TValue>(this HtmlHelper<TModel> html, Expression<Func<TModel, TValue>> expression, object htmlAttributes)
