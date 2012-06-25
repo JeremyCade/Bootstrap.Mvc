@@ -1,6 +1,6 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="FormExtensions.cs" company="AussieWeb Pty Ltd">
-//  No Copyright Intended. Use the code as you wish. 
+// <copyright file="FormExtensions.cs" company="Jeremy Cade">
+//      No Copyright Intended. Use the code as you wish. 
 // </copyright>
 // -----------------------------------------------------------------------
 
@@ -11,7 +11,7 @@ namespace Bootstrap.Mvc
     using System.Web.Mvc.Html;
 
     /// <summary>
-    /// Form Extenions to make working with Twitter Boostrap a little easier.
+    /// Form Extensions to make working with Twitter Bootstrap a little easier.
     /// </summary>
     public static class FormExtensions
     {                

@@ -1,7 +1,8 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="LabelExtensions.cs" company="AussieWeb Pty Ltd">
-//  No Copyright Intended. Use the code as you wish.
-//  LabelHelper Method from Microsofts MVC Source
+// <copyright file="LabelExtensions.cs" company="Jeremy Cade">
+//      No Copyright Intended. Use the code as you wish. 
+//
+//  LabelHelper Method from Microsoft's MVC Source
 //  Copyright (c) Microsoft Corporation. All rights reserved. See License.txt in the project root for license information.
 // </copyright>
 // -----------------------------------------------------------------------
@@ -13,7 +14,6 @@ namespace Bootstrap.Mvc
     using System.Linq;
     using System.Linq.Expressions;
     using System.Web.Mvc;
-    using System.Web.Routing;
 
     /// <summary>
     /// Twitter Bootstrap Friendly Label Extensions

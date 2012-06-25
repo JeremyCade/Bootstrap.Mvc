@@ -1,6 +1,6 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="InputExtensions.cs" company="">
-//  No Copyright Intended. Use the code as you wish. 
+// <copyright file="InputExtensions.cs" company="Jeremy Cade">
+//      No Copyright Intended. Use the code as you wish. 
 // </copyright>
 // -----------------------------------------------------------------------
 

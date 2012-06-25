@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="TagBuilderExtensions.cs" company="AussieWeb Pty Ltd">
-//  No Copyright Intended. Use the code as you wish. 
+// <copyright file="TagBuilderExtensions.cs" company="Jeremy Cade">
+//      No Copyright Intended. Use the code as you wish. 
 // </copyright>
 //-----------------------------------------------------------------------
 namespace Bootstrap.Mvc
