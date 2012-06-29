@@ -2,5 +2,5 @@
 [Bb]in
 *.csproj.user
 *.suo
-*.cache
+*.[Cc]ache
 packages/

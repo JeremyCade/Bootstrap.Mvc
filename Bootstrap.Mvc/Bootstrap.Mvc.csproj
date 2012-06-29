@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActionResultExtensions.cs" />
     <Compile Include="LabelExtensions.cs" />
     <Compile Include="FormExtensions.cs" />
     <Compile Include="InputExtensions.cs" />
