@@ -1,6 +1,6 @@
 ﻿// -----------------------------------------------------------------------
 // <copyright file="InputExtensions.cs" company="Jeremy Cade">
-//      No Copyright Intended. Use the code as you wish. 
+//      No Copyright Intended. Use the code as you wish.
 // </copyright>
 // -----------------------------------------------------------------------
 
@@ -11,7 +11,7 @@ namespace Bootstrap.Mvc
     using System.Linq;
     using System.Linq.Expressions;
     using System.Web.Mvc;
-    using System.Web.Mvc.Html;    
+    using System.Web.Mvc.Html;
 
     /// <summary>
     /// Set of Bootstrap Friendly Input Extensions
@@ -33,12 +33,12 @@ namespace Bootstrap.Mvc
             return LabelCheckBoxFor(htmlHelper, expression, null, htmlAttributes);
         }
 
-        public static MvcHtmlString LabelCheckBoxFor<TModel, TValue>(this HtmlHelper<TModel> htmlHelper, Expression<Func<TModel, TValue>> expression, string labelText) 
+        public static MvcHtmlString LabelCheckBoxFor<TModel, TValue>(this HtmlHelper<TModel> htmlHelper, Expression<Func<TModel, TValue>> expression, string labelText)
         {
             return LabelCheckBoxFor(htmlHelper, expression, labelText, null);
         }
 
-        public static MvcHtmlString LabelCheckBoxFor<TModel, TValue>(this HtmlHelper<TModel> htmlHelper, Expression<Func<TModel, TValue>> expression, string labelText, object htmlAttributes) 
+        public static MvcHtmlString LabelCheckBoxFor<TModel, TValue>(this HtmlHelper<TModel> htmlHelper, Expression<Func<TModel, TValue>> expression, string labelText, object htmlAttributes)
         {
             return LabelCheckBoxFor(htmlHelper, expression, labelText, HtmlHelper.AnonymousObjectToHtmlAttributes(htmlAttributes));
         }
@@ -69,16 +69,13 @@ namespace Bootstrap.Mvc
                 return MvcHtmlString.Empty;
             }
 
-
             TagBuilder label = new TagBuilder("label");
             label.MergeAttributes(htmlAttributes, replaceExisting: true);
             label.MergeAttribute("class", "checkbox"); // Add Twitter Bootstrap checkbox style to the label.
             label.Attributes.Add("for", htmlHelper.ViewContext.ViewData.TemplateInfo.GetFullHtmlFieldId(htmlFieldName));
             label.InnerHtml = String.Format("{0}{1}", htmlHelper.CheckBox(htmlFieldName, isChecked).ToHtmlString(), resolvedLabelText);
 
-            return label.ToMvcHtmlString(TagRenderMode.Normal);        
+            return label.ToMvcHtmlString(TagRenderMode.Normal);
         }
-
-        
     }
 }

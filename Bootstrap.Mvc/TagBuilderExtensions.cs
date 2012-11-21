@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="TagBuilderExtensions.cs" company="Jeremy Cade">
-//      No Copyright Intended. Use the code as you wish. 
+//      No Copyright Intended. Use the code as you wish.
 // </copyright>
 //-----------------------------------------------------------------------
 namespace Bootstrap.Mvc
@@ -12,7 +12,7 @@ namespace Bootstrap.Mvc
     /// </summary>
     public static class TagBuilderExtensions
     {
-        public static MvcHtmlString ToMvcHtmlString(this TagBuilder tagBuilder, TagRenderMode renderMode) 
+        public static MvcHtmlString ToMvcHtmlString(this TagBuilder tagBuilder, TagRenderMode renderMode)
         {
             return new MvcHtmlString(tagBuilder.ToString(renderMode));
         }

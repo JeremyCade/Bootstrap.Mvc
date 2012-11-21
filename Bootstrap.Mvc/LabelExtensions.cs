@@ -1,6 +1,6 @@
 ﻿// -----------------------------------------------------------------------
 // <copyright file="LabelExtensions.cs" company="Jeremy Cade">
-//      No Copyright Intended. Use the code as you wish. 
+//      No Copyright Intended. Use the code as you wish.
 //
 //  LabelHelper Method from Microsoft's MVC Source
 //  Copyright (c) Microsoft Corporation. All rights reserved. See License.txt in the project root for license information.
@@ -20,7 +20,6 @@ namespace Bootstrap.Mvc
     /// </summary>
     public static class LabelExtensions
     {
-
         public static MvcHtmlString ControlLabel(this HtmlHelper html, string expression)
         {
             Dictionary<string, object> htmlAttributes = new Dictionary<string, object>();
@@ -32,8 +31,8 @@ namespace Bootstrap.Mvc
                    null,
                    htmlAttributes);
         }
-        
-        public static MvcHtmlString ControlLabel(this HtmlHelper html, string expression, string labelText) 
+
+        public static MvcHtmlString ControlLabel(this HtmlHelper html, string expression, string labelText)
         {
             Dictionary<string, object> htmlAttributes = new Dictionary<string, object>();
             htmlAttributes.Add("class", "control-label");
@@ -42,7 +41,7 @@ namespace Bootstrap.Mvc
                    ModelMetadata.FromStringExpression(expression, html.ViewData),
                    expression,
                    labelText,
-                   htmlAttributes);            
+                   htmlAttributes);
         }
 
         public static MvcHtmlString ControlLabelFor<TModel, TValue>(this HtmlHelper<TModel> html, Expression<Func<TModel, TValue>> expression)
@@ -50,7 +49,7 @@ namespace Bootstrap.Mvc
             Dictionary<string, object> htmlAttributes = new Dictionary<string, object>();
             htmlAttributes.Add("class", "control-label");
 
-            return html.LabelFor(expression, null, htmlAttributes);            
+            return html.LabelFor(expression, null, htmlAttributes);
         }
 
         public static MvcHtmlString ControlLabelFor<TModel, TValue>(this HtmlHelper<TModel> html, Expression<Func<TModel, TValue>> expression, string labelText)
@@ -60,7 +59,7 @@ namespace Bootstrap.Mvc
 
             return html.LabelFor(expression, labelText, htmlAttributes);
         }
-        
+
         public static MvcHtmlString LabelFor<TModel, TValue>(this HtmlHelper<TModel> html, Expression<Func<TModel, TValue>> expression, object htmlAttributes)
         {
             return html.LabelFor(expression, null, HtmlHelper.AnonymousObjectToHtmlAttributes(htmlAttributes));
@@ -77,11 +76,11 @@ namespace Bootstrap.Mvc
                      ModelMetadata.FromLambdaExpression(expression, html.ViewData),
                      ExpressionHelper.GetExpressionText(expression),
                      labelText,
-                     htmlAttributes);              
+                     htmlAttributes);
         }
 
         /// <summary>
-        /// Microsofts Internal Label Helper
+        /// Microsoft's Internal Label Helper
         /// </summary>
         /// <param name="html">Html Helper</param>
         /// <param name="metadata">Model Meta Data</param>
@@ -102,6 +101,6 @@ namespace Bootstrap.Mvc
             tag.SetInnerText(resolvedLabelText);
             tag.MergeAttributes(htmlAttributes, replaceExisting: true);
             return tag.ToMvcHtmlString(TagRenderMode.Normal);
-        }        
+        }
     }
 }

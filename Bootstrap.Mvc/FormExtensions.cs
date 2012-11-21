@@ -1,6 +1,6 @@
 ﻿// -----------------------------------------------------------------------
 // <copyright file="FormExtensions.cs" company="Jeremy Cade">
-//      No Copyright Intended. Use the code as you wish. 
+//      No Copyright Intended. Use the code as you wish.
 // </copyright>
 // -----------------------------------------------------------------------
 
@@ -14,7 +14,7 @@ namespace Bootstrap.Mvc
     /// Form Extensions to make working with Twitter Bootstrap a little easier.
     /// </summary>
     public static class FormExtensions
-    {                
+    {
         public static MvcForm BeginForm(this HtmlHelper htmlHelper, string formId, string cssClass)
         {
             string actionName = (string)htmlHelper.ViewContext.RouteData.Values["action"];
@@ -24,7 +24,7 @@ namespace Bootstrap.Mvc
             htmlAttributes.Add("class", cssClass ?? string.Empty);
             return htmlHelper.BeginForm(actionName, controllerName, FormMethod.Post, htmlAttributes);
         }
-        
+
         public static MvcForm BeginForm(this HtmlHelper htmlHelper, string cssClass)
         {
             string actionName = (string)htmlHelper.ViewContext.RouteData.Values["action"];
@@ -36,9 +36,9 @@ namespace Bootstrap.Mvc
 
         #region Bootstrap Specific Form Types
 
-        public static MvcForm BeginVerticalForm(this HtmlHelper htmlHelper)
+        public static MvcForm BeginHorizontalForm(this HtmlHelper htmlHelper)
         {
-            return htmlHelper.BeginForm("form-vertical");            
+            return htmlHelper.BeginForm("form-horizontal");
         }
 
         public static MvcForm BeginInlineForm(this HtmlHelper htmlHelper)
@@ -51,11 +51,11 @@ namespace Bootstrap.Mvc
             return htmlHelper.BeginForm("form-search");
         }
 
-        public static MvcForm BeginHorizontalForm(this HtmlHelper htmlHelper)         
+        public static MvcForm BeginVerticalForm(this HtmlHelper htmlHelper)
         {
-            return htmlHelper.BeginForm("form-horizontal");
+            return htmlHelper.BeginForm("form-vertical");
         }
 
-        #endregion
+        #endregion Bootstrap Specific Form Types
     }
 }
